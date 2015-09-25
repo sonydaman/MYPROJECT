@@ -1,0 +1,49 @@
+extends include/header
+extends include/headerLinks
+
+block content
+      header.codrops-header
+        h1
+          | My Games List 
+          span
+            | Some Text Type Here
+            a(href='#')  some Link app by Sonydaman
+      section#grid3d.grid3d.vertical
+         
+        .grid-wrap
+          .grid
+            each game,g in games
+                figure
+                  img(src='/#{game.outerImg}', alt='#{game.Name}')
+        // /grid-wrap
+        .content
+          each game in games
+              div
+                .dummy-img
+                     p #{game.Name}
+                     img(src='/#{game.innerImg}', alt='#{game.Name}')
+                     p #{game.tile}                
+                p.dummy-text
+                    | #{game.Desctiption}                
+                p.dummy-text
+                    | GameType  :
+                    select(style="text-transform: uppercase;")                
+                      each types, t in game.gameType
+                          option(value="#{t}") #{types}
+                    br
+                    | GameLevel  : 
+                    span(style="font-size: 18px;") #{game.gameLevel}
+                    div.related
+                      a(href="#{game.url}",style="background-color: #018DA1;")
+                         h3 Play Game
+                    
+          span.loading
+          span.icon.close-content
+      section
+        p
+          | Illustrations by 
+          a(href='https://www.behance.net/AdamQuest') Adam Quest
+       include ./include/footer
+       block footer
+       include ./include/footerLinks
+       block footerLinks
