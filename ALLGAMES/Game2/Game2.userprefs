@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\destrctable.js">
+    <Files>
+      <File FileName="Assets\scripts\Ballscript.js" Line="1" Column="1" />
+      <File FileName="Assets\enemy.js" Line="1" Column="1" />
+      <File FileName="Assets\DieOnHit.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\gameMaster.js" Line="1" Column="1" />
+      <File FileName="Assets\destrctable.js" Line="9" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

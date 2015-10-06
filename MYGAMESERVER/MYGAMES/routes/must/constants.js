@@ -47,6 +47,8 @@ module.exports = function(){
 // USERS INFORMATION
 "gamelistRoutes"		:	'./routes/gameList',
 "gamesApp"		:	'/games',
+"gamesApi"		:	'/api',
+"gamesApiQuestion"		:	'/api/questions',
 "gamesUrl"		:	'/all',
 "gamesView"		:	'games',
 

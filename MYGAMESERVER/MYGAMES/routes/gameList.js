@@ -21,6 +21,29 @@ router.get(constant.gamesUrl, function(req, res) {
 	
 });
 
+// GAME LIST 
+router.get(constant.gamesApi, function(req, res) {
+	//FETCH DATA FROM "gameList" TABLE
+	var collection = req.db.get(constant.allGame)  
+	response.mongoDB.fetchData(collection,{},{},function(result){        
+		
+		 response.requestPage.apiPage(res,constant.rok, {"games" : result.data}); 
+    });
+	
+});
+
+// QUESTION LIST
+router.get(constant.gamesApiQuestion, function(req, res) {
+	//FETCH DATA FROM "qnsList" TABLE
+	var collection = req.db.get(constant.allQns)  
+	response.mongoDB.fetchData(collection,{},{},function(result){        
+		
+		 response.requestPage.apiPage(res,constant.rok, result.data); 
+    });
+	
+});
+
+
 // /newuser rendering page
 router.get(constant.newUserRouts, function(req, res) {
 	response.requestPage.renderPage(res,constant.newuserView,constant.rok, { title: 'Add New User' }); 
